@@ -1,0 +1,66 @@
+<script setup lang="ts">
+import CardBlock from 'components/CardBlock.vue';
+import { type CardBlock as ICardBlock } from 'components/types/components';
+
+export interface AboutSection {
+  title: string;
+  subtitle: string;
+  firstColumnCards: ICardBlock[];
+  secondColumnCards: ICardBlock[];
+}
+
+const { title, subtitle, firstColumnCards, secondColumnCards } =
+  defineProps<AboutSection>();
+</script>
+
+<template>
+  <div class="container">
+    <div class="firstColumn">
+      <h1>{{ title }}</h1>
+      <h4>
+        {{ subtitle }}
+      </h4>
+      <CardBlock
+        v-for="card in firstColumnCards"
+        :key="card.title"
+        :title="card.title"
+        :text="card.text"
+        :image="card.image"
+        :on-click="card.onClick"
+        class-name="card-block"
+      />
+    </div>
+    <div class="secondColumn">
+      <CardBlock
+        v-for="card in secondColumnCards"
+        :key="card.title"
+        :title="card.title"
+        :text="card.text"
+        :image="card.image"
+        :on-click="card.onClick"
+        class-name="card-block"
+      />
+    </div>
+  </div>
+</template>
+
+<style scoped lang="scss">
+@import '../css/mixins';
+@import '../css/vars';
+.container {
+  background-color: aqua;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5.5em;
+  .firstColumn,
+  .secondColumn {
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+  }
+  .secondColumn {
+    padding: 1em 0;
+    row-gap: 1em;
+  }
+}
+</style>
