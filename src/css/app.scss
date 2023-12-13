@@ -1,3 +1,5 @@
 // app global css in SCSS form
+@import url('./reset.scss');
+@import url('./normalize.scss');
 @import './_vars.scss';
 @import './_mixins.scss';
