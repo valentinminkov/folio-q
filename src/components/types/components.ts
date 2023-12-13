@@ -36,5 +36,13 @@ export interface CardBlock {
   text: string;
   image: Image;
   onClick: unknown;
+  layout?: 'row' | 'column';
   className?: string;
+}
+
+export interface Project {
+  title: string;
+  description: string;
+  image: Image;
+  onClick: () => void;
 }
