@@ -27,6 +27,7 @@ const { title, subtitle, firstColumnCards, secondColumnCards } =
         :text="card.text"
         :image="card.image"
         :on-click="card.onClick"
+        :layout="card.layout"
         class-name="card-block"
       />
     </div>
@@ -38,6 +39,7 @@ const { title, subtitle, firstColumnCards, secondColumnCards } =
         :text="card.text"
         :image="card.image"
         :on-click="card.onClick"
+        :layout="card.layout"
         class-name="card-block"
       />
     </div>
