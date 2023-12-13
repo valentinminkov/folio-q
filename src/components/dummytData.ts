@@ -4,6 +4,7 @@ import type {
   Image,
   InfoBlock,
   CardBlock,
+  Project,
 } from 'components/types/components';
 import type { VNode } from 'vue';
 
@@ -44,4 +45,36 @@ export const cardBlockDummyData: CardBlock = {
     alert('Card clicked!');
   },
   className: 'info-card-class',
+  layout: 'column',
+};
+
+export const aboutSectionDummyData = {
+  title: 'Skills & Expertise',
+  subtitle:
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore',
+  firstColumnCards: [cardBlockDummyData, cardBlockDummyData] as CardBlock[],
+  secondColumnCards: [cardBlockDummyData] as CardBlock[],
+};
+
+export const dummyProject: Project = {
+  title: 'Project Title',
+  description: 'This is a project description.',
+  image: imageDummyData,
+  onClick: () => {
+    alert('Project clicked!');
+  },
+};
+
+export const contactSectionDummyData = {
+  title: 'Contact Us',
+  description:
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore',
+  onSubmit: () => {
+    alert('Form submitted!');
+  },
+};
+
+export const projectsSectionDummyData = {
+  title: 'Projects',
+  projects: [dummyProject, dummyProject] as Project[],
 };
