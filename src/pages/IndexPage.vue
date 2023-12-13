@@ -6,39 +6,66 @@
     :image="heroBlockDummyData.image"
   />
   <!-- About section -->
-  <q-intersection transition="fade" class="section-container">
-    <q-intersection transition="none" class="card-container">
-      <CardBlock
-        :title="cardBlockDummyData.title"
-        :text="cardBlockDummyData.text"
-        :image="cardBlockDummyData.image"
-        :on-click="cardBlockDummyData.onClick"
-      />
-    </q-intersection>
+  <q-intersection once>
+    <AboutSection
+      :title="aboutSectionDummyData.title"
+      :subtitle="aboutSectionDummyData.subtitle"
+      :first-column-cards="aboutSectionDummyData.firstColumnCards"
+      :second-column-cards="aboutSectionDummyData.secondColumnCards"
+    />
   </q-intersection>
 
   <!-- Projects section -->
+  <q-intersection once>
+    <ProjectsSection
+      :title="projectsSectionDummyData.title"
+      :projects="projectsSectionDummyData.projects"
+    />
+  </q-intersection>
 
-  <!-- Who/Contact section -->
+  <!-- Contact section -->
+  <q-intersection once>
+    <ContactSection
+      :title="contactSectionDummyData.title"
+      :description="contactSectionDummyData.description"
+      :on-submit="contactSectionDummyData.onSubmit"
+    />
+  </q-intersection>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
 import HeroBlock from 'components/HeroBlock.vue';
-import CardBlock from 'components/CardBlock.vue';
-import { heroBlockDummyData, cardBlockDummyData } from 'components/dummytData';
+import AboutSection from 'components/AboutSection.vue';
+import ProjectsSection from 'components/ProjectsSection.vue';
+import ContactSection from 'components/ContactSection.vue';
+
+import {
+  heroBlockDummyData,
+  aboutSectionDummyData,
+  projectsSectionDummyData,
+  contactSectionDummyData,
+} from 'components/dummytData';
 
 export default defineComponent({
   name: 'IndexPage',
   components: {
     HeroBlock,
-    CardBlock,
+    AboutSection,
+    ProjectsSection,
+    ContactSection,
   },
   data() {
     return {
       heroBlockDummyData,
-      cardBlockDummyData,
+      aboutSectionDummyData,
+      projectsSectionDummyData,
+      contactSectionDummyData,
     };
   },
 });
 </script>
+<style scoped lang="scss">
+@import '../css/mixins';
+@import '../css/vars';
+</style>
