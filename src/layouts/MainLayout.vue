@@ -4,7 +4,7 @@
       <router-view />
     </q-page-container>
     <!-- Footer -->
-    <q-footer elevated class="bg-grey-8 text-white">
+    <q-footer class="bg-grey-8 text-white">
       <q-toolbar>
         <q-toolbar-title>
           <q-avatar>

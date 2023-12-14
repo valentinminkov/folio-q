@@ -52,8 +52,8 @@ export const aboutSectionDummyData = {
   title: 'Skills & Expertise',
   subtitle:
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore',
-  firstColumnCards: [cardBlockDummyData, cardBlockDummyData] as CardBlock[],
-  secondColumnCards: [cardBlockDummyData] as CardBlock[],
+  firstColumnCards: [cardBlockDummyData] as CardBlock[],
+  secondColumnCards: [cardBlockDummyData, cardBlockDummyData] as CardBlock[],
 };
 
 export const dummyProject: Project = {

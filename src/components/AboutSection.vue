@@ -53,8 +53,6 @@ const { title, subtitle, firstColumnCards, secondColumnCards } =
   justify-content: space-between;
   .firstColumn,
   .secondColumn {
-    padding: 0 5.5em;
-
     display: flex;
     flex-direction: column;
     max-width: 50%;
