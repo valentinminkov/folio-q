@@ -1,12 +1,5 @@
 <script setup lang="ts">
-export interface Button {
-  text: string;
-  url?: string;
-  onClick?: () => void;
-  className?: string;
-  icon?: unknown;
-}
-
+import { type Button } from 'components/types/components';
 const { text, className, onClick, url } = defineProps<Button>();
 </script>
 

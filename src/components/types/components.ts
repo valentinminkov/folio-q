@@ -2,7 +2,10 @@ import type { VNode } from 'vue';
 
 export interface Button {
   text: string;
-  url: string;
+  url?: string;
+  onClick?: () => void;
+  className?: string;
+  icon?: unknown;
 }
 
 export interface HeroBlock {
