@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import CardBlock from 'components/CardBlock.vue';
+import TextBlock from 'components/TextBlock.vue';
 import { type CardBlock as ICardBlock } from 'components/types/components';
 
 export interface AboutSection {
@@ -16,10 +17,7 @@ const { title, subtitle, firstColumnCards, secondColumnCards } =
 <template>
   <div class="container">
     <div class="firstColumn">
-      <h1>{{ title }}</h1>
-      <h4>
-        {{ subtitle }}
-      </h4>
+      <TextBlock :title="title" :subtitle="subtitle" />
       <CardBlock
         v-for="card in firstColumnCards"
         :key="card.title"
@@ -53,9 +51,10 @@ const { title, subtitle, firstColumnCards, secondColumnCards } =
   background-color: aqua;
   display: flex;
   justify-content: space-between;
-  padding: 0 5.5em;
   .firstColumn,
   .secondColumn {
+    padding: 0 5.5em;
+
     display: flex;
     flex-direction: column;
     max-width: 50%;

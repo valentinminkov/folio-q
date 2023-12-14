@@ -1,17 +1,13 @@
 <script setup lang="ts">
 import { type HeroBlock } from 'components/types/components';
-import BaseButton from 'components/BaseButton.vue';
+import TextBlock from 'components/TextBlock.vue';
 const { title, subtitle, button, image } = defineProps<HeroBlock>();
 </script>
 
 <template>
   <div class="heroContainer">
     <div class="content">
-      <h1 class="title">{{ title }}</h1>
-      <h3 v-if="subtitle" class="subtitle">{{ subtitle }}</h3>
-      <div v-if="button && button.text && button.url" class="buttonContainer">
-        <BaseButton :text="button.text" :url="button.url" />
-      </div>
+      <TextBlock :title="title" :subtitle="subtitle" :button="button" />
     </div>
     <template v-if="image && image.src">
       <div class="image">
@@ -50,12 +46,6 @@ const { title, subtitle, button, image } = defineProps<HeroBlock>();
       height: 100%;
       object-fit: cover;
     }
-  }
-  .title {
-    @include h1;
-  }
-  .subtitle {
-    @include h3;
   }
 }
 </style>

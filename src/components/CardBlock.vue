@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { type Image } from 'components/types/components';
 import { computed } from 'vue';
+import TextBlock from 'components/TextBlock.vue';
 
 export interface CardBlock {
   title: string;
@@ -31,8 +32,7 @@ const computedClass = computed(() => {
     />
 
     <q-card-section>
-      <h1 class="title">{{ title }}</h1>
-      <p v-if="text" class="text">{{ text }}</p>
+      <TextBlock :title="title" :description="text" />
     </q-card-section>
   </q-card>
 </template>

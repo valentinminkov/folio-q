@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import BaseButton from 'components/BaseButton.vue';
+import TextBlock from 'components/TextBlock.vue';
 import { ref } from 'vue';
 
 export interface IContactSection {
@@ -15,12 +16,8 @@ const message = ref('');
 
 <template>
   <div class="container">
-    <div class="textContainer">
-      <h1>{{ title }}</h1>
-      <p>
-        {{ description }}
-      </p>
-    </div>
+    <TextBlock :title="title" :description="description" />
+    <div style="flex-grow: 1"></div>
     <div class="inputContainer">
       <q-input filled v-model="email" label="email" />
       <q-input filled v-model="message" label="message" />
@@ -35,7 +32,6 @@ const message = ref('');
 .container {
   background-color: cadetblue;
   display: flex;
-  .textContainer,
   .inputContainer {
     display: flex;
     flex-direction: column;
