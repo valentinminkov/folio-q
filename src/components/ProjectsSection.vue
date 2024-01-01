@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import ProjectCard from 'components/ProjectCard.vue';
+import TextBlock from 'components/TextBlock.vue';
 import { type Project } from 'components/types/components';
 
 export interface ProjectsSection {
@@ -12,19 +13,23 @@ const { projects, title } = defineProps<ProjectsSection>();
 
 <template>
   <div class="container">
-    <h4>{{ title }}</h4>
-    <q-intersection
-      transition="fade"
-      v-for="project in projects"
-      :key="project.title"
-    >
-      <ProjectCard
-        :title="project.title"
-        :description="project.description"
-        :image="project.image"
-        :on-click="project.onClick"
-      />
-    </q-intersection>
+    <TextBlock :title="title" />
+
+    <div class="projectsContainer">
+      <q-intersection
+        transition="fade"
+        v-for="project in projects"
+        :key="project.title"
+        once
+      >
+        <ProjectCard
+          :title="project.title"
+          :description="project.description"
+          :image="project.image"
+          :on-click="project.onClick"
+        />
+      </q-intersection>
+    </div>
   </div>
 </template>
 
@@ -33,5 +38,12 @@ const { projects, title } = defineProps<ProjectsSection>();
 @import '../css/vars';
 .container {
   background-color: blanchedalmond;
+  padding-left: 2em;
+  padding-bottom: 2em;
+  .projectsContainer {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5em;
+  }
 }
 </style>

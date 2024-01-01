@@ -16,11 +16,21 @@ const message = ref('');
 
 <template>
   <div class="container">
-    <TextBlock :title="title" :description="description" />
+    <div class="leftRow">
+      <TextBlock :title="title" :description="description" />
+    </div>
     <div style="flex-grow: 1"></div>
-    <div class="inputContainer">
-      <q-input filled v-model="email" label="email" />
-      <q-input filled v-model="message" label="message" />
+    <div class="rightRow">
+      <div class="inputsContainer">
+        <q-input filled v-model="email" label="email" class="input" />
+        <q-input
+          filled
+          v-model="message"
+          label="message"
+          class="input"
+          type="textarea"
+        />
+      </div>
       <BaseButton text="Submit" :onClick="onSubmit" />
     </div>
   </div>
@@ -30,11 +40,32 @@ const message = ref('');
 @import '../css/mixins';
 @import '../css/vars';
 .container {
+  padding: 8em 4em;
   background-color: cadetblue;
   display: flex;
-  .inputContainer {
+  .leftRow {
+    width: 400px;
+  }
+
+  .rightRow {
     display: flex;
     flex-direction: column;
+    row-gap: 1.5em;
+    width: 50%;
+    .inputsContainer {
+      display: flex;
+      flex-direction: column;
+      row-gap: 1em;
+      .input {
+        width: 100%;
+        &.large {
+          height: 200px;
+          input {
+            height: 100%;
+          }
+        }
+      }
+    }
   }
 }
 </style>

@@ -51,12 +51,18 @@ const { title, subtitle, firstColumnCards, secondColumnCards } =
   background-color: aqua;
   display: flex;
   justify-content: space-between;
+  padding: 3em;
   .firstColumn,
   .secondColumn {
     display: flex;
     flex-direction: column;
     max-width: 50%;
   }
+
+  .firstColumn {
+    row-gap: 3em;
+  }
+
   .secondColumn {
     padding: 1em 0;
     row-gap: 1em;

@@ -20,7 +20,7 @@ export const buttonDummyData: Button = {
 };
 
 export const heroBlockDummyData: HeroBlock = {
-  title: 'Hero block dummy title!',
+  title: "I'm Valentin, a Web Developer. ",
   button: buttonDummyData,
   subtitle: 'We offer services.',
   className: 'hero-class',

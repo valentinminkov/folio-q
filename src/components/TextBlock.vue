@@ -13,7 +13,7 @@ const { title, subtitle, description, button } = defineProps<TextBlock>();
 </script>
 
 <template>
-  <div class="container" v-if="title || subtitle || description">
+  <div class="textContainer" v-if="title || subtitle || description">
     <h1 v-if="title">{{ title }}</h1>
     <h4 v-if="subtitle">
       {{ subtitle }}
@@ -30,12 +30,16 @@ const { title, subtitle, description, button } = defineProps<TextBlock>();
 <style scoped lang="scss">
 @import '../css/vars';
 @import '../css/mixins';
-.container {
+.textContainer {
   display: flex;
   flex-direction: column;
   h1 {
+    padding: 0;
+    margin: 0;
   }
   h4 {
+    padding: 0;
+    margin: 0;
   }
   p {
   }

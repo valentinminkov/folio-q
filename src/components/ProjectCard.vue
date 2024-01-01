@@ -8,8 +8,8 @@ const { title, image, onClick, description } = defineProps<Project>();
   <div class="container" @click="onClick">
     <TextBlock :title="title" :description="description" />
 
-    <div class="previewContainer">
-      <img :src="image.src" alt="project image" />
+    <div class="imageContainer">
+      <q-img :src="image.src" :ratio="16 / 9" class="image" />
     </div>
   </div>
 </template>
@@ -20,12 +20,22 @@ const { title, image, onClick, description } = defineProps<Project>();
 .container {
   display: flex;
   justify-content: space-between;
-  border: solid 1px black;
   overflow: hidden;
+  align-items: center;
 }
 
-.previewContainer {
+.imageContainer {
+  padding: 0 1rem;
   width: 50%;
   height: 100%;
+
+  .image {
+    cursor: pointer;
+    :hover {
+      transition: 0.1s;
+      opacity: 0.9;
+      transform: scale(1.01);
+    }
+  }
 }
 </style>
