@@ -22,13 +22,20 @@ const message = ref('');
     <div style="flex-grow: 1"></div>
     <div class="rightRow">
       <div class="inputsContainer">
-        <q-input filled v-model="email" label="email" class="input" />
+        <q-input
+          filled
+          v-model="email"
+          label="email"
+          class="input"
+          label-color="white"
+        />
         <q-input
           filled
           v-model="message"
           label="message"
           class="input"
           type="textarea"
+          label-color="white"
         />
       </div>
       <BaseButton text="Submit" :onClick="onSubmit" />
@@ -41,7 +48,7 @@ const message = ref('');
 @import '../css/vars';
 .container {
   padding: 8em 4em;
-  background-color: cadetblue;
+  background-color: $secondary_color;
   display: flex;
   .leftRow {
     width: 400px;
@@ -58,6 +65,7 @@ const message = ref('');
       row-gap: 1em;
       .input {
         width: 100%;
+        background-color: $inputs_background_color;
         &.large {
           height: 200px;
           input {

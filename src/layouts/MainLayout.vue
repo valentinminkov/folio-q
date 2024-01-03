@@ -4,7 +4,7 @@
       <router-view />
     </q-page-container>
     <!-- Footer -->
-    <q-footer class="bg-grey-8 text-white">
+    <q-footer class="footer">
       <q-toolbar>
         <q-toolbar-title>
           <q-avatar>
@@ -24,3 +24,11 @@ export default defineComponent({
   name: 'MainLayout',
 });
 </script>
+
+<style scoped lang="scss">
+@import '../css/mixins';
+@import '../css/vars';
+.footer {
+  background-color: $fourth_color;
+}
+</style>

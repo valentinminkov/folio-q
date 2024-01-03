@@ -31,7 +31,7 @@ const computedClass = computed(() => {
       class="image"
     />
 
-    <q-card-section>
+    <q-card-section class="cardBlockTextContainer">
       <TextBlock :title="title" :description="text" />
     </q-card-section>
   </q-card>
@@ -41,11 +41,16 @@ const computedClass = computed(() => {
 @import '../css/mixins';
 @import '../css/vars';
 .card {
+  border-radius: 0;
+  border: none;
   &.columnLayout {
     //todo
   }
   &.rowLayout {
     //todo
+  }
+  .cardBlockTextContainer {
+    background-color: $grayblue;
   }
 }
 </style>

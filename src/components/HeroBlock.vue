@@ -29,7 +29,7 @@ const { title, subtitle, button, image } = defineProps<HeroBlock>();
 .heroContainer {
   min-height: 100vh;
   max-height: 100vh;
-  background-color: $base_color;
+  background-color: $secondary_color;
   display: flex;
   color: $text_color;
   .content {

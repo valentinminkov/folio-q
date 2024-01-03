@@ -5,7 +5,7 @@ const { title, image, onClick, description } = defineProps<Project>();
 </script>
 
 <template>
-  <div class="container" @click="onClick">
+  <div class="cardContainer" @click="onClick">
     <TextBlock :title="title" :description="description" />
 
     <div class="imageContainer">
@@ -17,11 +17,12 @@ const { title, image, onClick, description } = defineProps<Project>();
 <style scoped lang="scss">
 @import '../css/mixins';
 @import '../css/vars';
-.container {
+.cardContainer {
   display: flex;
   justify-content: space-between;
   overflow: hidden;
   align-items: center;
+  background-color: $secondary_color;
 }
 
 .imageContainer {

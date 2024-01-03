@@ -65,7 +65,25 @@ export default defineComponent({
   },
 });
 </script>
-<style scoped lang="scss">
+<!-- Global styles -->
+<style lang="scss">
 @import '../css/mixins';
 @import '../css/vars';
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+div,
+li,
+ul,
+ol,
+button,
+input,
+textarea {
+  color: $text_color;
+}
 </style>

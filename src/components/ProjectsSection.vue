@@ -12,7 +12,7 @@ const { projects, title } = defineProps<ProjectsSection>();
 </script>
 
 <template>
-  <div class="container">
+  <div class="projectSectionContainer">
     <TextBlock :title="title" />
 
     <div class="projectsContainer">
@@ -36,8 +36,8 @@ const { projects, title } = defineProps<ProjectsSection>();
 <style scoped lang="scss">
 @import '../css/mixins';
 @import '../css/vars';
-.container {
-  background-color: blanchedalmond;
+.projectSectionContainer {
+  background-color: $thirdiary_color;
   padding-left: 2em;
   padding-bottom: 2em;
   .projectsContainer {

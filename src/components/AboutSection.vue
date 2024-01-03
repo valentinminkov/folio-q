@@ -48,7 +48,7 @@ const { title, subtitle, firstColumnCards, secondColumnCards } =
 @import '../css/mixins';
 @import '../css/vars';
 .container {
-  background-color: aqua;
+  background-color: $base_color;
   display: flex;
   justify-content: space-between;
   padding: 3em;
