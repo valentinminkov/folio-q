@@ -1,5 +1,11 @@
 $base_color: #0f1b27;
 $secondary_color: #0b161f;
-$thirdiary_color: #0e1a25;
+$thirdiary_color: #081016;
+$fourth_color: #070d13;
 $accent_color: #c18521;
-$text_color: #fff;
+$twilight_blue: #edfbff;
+$grayblue: #3c4856;
+
+$text_color: $twilight_blue;
+$inputs_background_color: $grayblue;
+$inputs_placeholder_color: $twilight_blue;
