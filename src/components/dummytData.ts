@@ -67,36 +67,36 @@ export const infoBlockDummyData: InfoBlock = {
   secondColumnContent: {} as VNode,
 };
 
-export const cardBlockDummyData1: CardBlock = {
-  title: 'Info Card Title',
-  text: 'This card provides some valuable information.',
+export const uiDesignCard: CardBlock = {
+  title: 'UI/UX Design',
+  text: 'Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia.',
   image: uiDesignImg,
   onClick: () => {
     alert('Card clicked!');
   },
-  className: 'info-card-class',
+  className: 'uiDesignCard',
   layout: 'stacked',
 };
 
-export const cardBlockDummyData2: CardBlock = {
-  title: 'Info Card Title',
-  text: 'This card provides some valuable information.',
+export const skillsCard: CardBlock = {
+  title: 'Full-stack Web Development',
+  text: 'Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia.',
   image: skillsImg,
   onClick: () => {
     alert('Card clicked!');
   },
-  className: 'info-card-class',
+  className: 'skillsCard',
   layout: 'adjacent',
 };
 
-export const cardBlockDummyData3: CardBlock = {
-  title: 'Info Card Title',
-  text: 'This card provides some valuable information.',
+export const resumeCard: CardBlock = {
+  title: 'Download Resume',
+  text: 'Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia.',
   image: portfolioIcon,
   onClick: () => {
     alert('Card clicked!');
   },
-  className: 'info-card-class',
+  className: 'resumeCard',
   layout: 'adjacent',
   seperator: false,
 };
@@ -105,8 +105,8 @@ export const aboutSectionDummyData = {
   title: 'Skills & Expertise',
   subtitle:
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore',
-  firstColumnCards: [cardBlockDummyData2] as CardBlock[],
-  secondColumnCards: [cardBlockDummyData1, cardBlockDummyData3] as CardBlock[],
+  firstColumnCards: [skillsCard] as CardBlock[],
+  secondColumnCards: [uiDesignCard, resumeCard] as CardBlock[],
 };
 
 export const dummyProject1: Project = {
