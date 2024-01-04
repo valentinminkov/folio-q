@@ -29,6 +29,21 @@ export const skillsImg: Image = {
   alt: 'Skills Image',
 };
 
+export const projectImgDummyData1: Image = {
+  src: 'images/exampleproject1.png',
+  alt: 'Skills Image',
+};
+
+export const projectImgDummyData2: Image = {
+  src: 'images/exampleproject2.png',
+  alt: 'Skills Image',
+};
+
+export const heroDummyImg: Image = {
+  src: 'images/hero.png',
+  alt: 'Skills Image',
+};
+
 export const buttonDummyData: Button = {
   text: 'Click me!',
   url: '/some-url',
@@ -39,7 +54,7 @@ export const heroBlockDummyData: HeroBlock = {
   button: buttonDummyData,
   subtitle: 'We offer services.',
   className: 'hero-class',
-  image: imageDummyData,
+  image: heroDummyImg,
 };
 
 export const infoBlockDummyData: InfoBlock = {
@@ -94,10 +109,19 @@ export const aboutSectionDummyData = {
   secondColumnCards: [cardBlockDummyData1, cardBlockDummyData3] as CardBlock[],
 };
 
-export const dummyProject: Project = {
+export const dummyProject1: Project = {
   title: 'Project Title',
   description: 'This is a project description.',
-  image: imageDummyData,
+  image: projectImgDummyData1,
+  onClick: () => {
+    alert('Project clicked!');
+  },
+};
+
+export const dummyProject2: Project = {
+  title: 'Project Title',
+  description: 'This is a project description.',
+  image: projectImgDummyData2,
   onClick: () => {
     alert('Project clicked!');
   },
@@ -114,5 +138,5 @@ export const contactSectionDummyData = {
 
 export const projectsSectionDummyData = {
   title: 'Projects',
-  projects: [dummyProject, dummyProject] as Project[],
+  projects: [dummyProject1, dummyProject2] as Project[],
 };
