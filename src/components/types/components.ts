@@ -39,8 +39,9 @@ export interface CardBlock {
   text: string;
   image: Image;
   onClick: unknown;
-  layout?: 'row' | 'column';
+  layout?: 'stacked' | 'adjacent';
   className?: string;
+  seperator?: boolean;
 }
 
 export interface Project {
