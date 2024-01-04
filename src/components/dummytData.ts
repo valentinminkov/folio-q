@@ -14,6 +14,21 @@ export const imageDummyData: Image = {
   className: 'image-class',
 };
 
+export const portfolioIcon: Image = {
+  src: 'images/portfolio.svg',
+  alt: 'Portfolio Icon',
+};
+
+export const uiDesignImg: Image = {
+  src: 'images/uidesign.png',
+  alt: 'Portfolio Icon',
+};
+
+export const skillsImg: Image = {
+  src: 'images/skills.svg',
+  alt: 'Skills Image',
+};
+
 export const buttonDummyData: Button = {
   text: 'Click me!',
   url: '/some-url',
@@ -40,7 +55,7 @@ export const infoBlockDummyData: InfoBlock = {
 export const cardBlockDummyData1: CardBlock = {
   title: 'Info Card Title',
   text: 'This card provides some valuable information.',
-  image: imageDummyData,
+  image: uiDesignImg,
   onClick: () => {
     alert('Card clicked!');
   },
@@ -51,7 +66,7 @@ export const cardBlockDummyData1: CardBlock = {
 export const cardBlockDummyData2: CardBlock = {
   title: 'Info Card Title',
   text: 'This card provides some valuable information.',
-  image: imageDummyData,
+  image: skillsImg,
   onClick: () => {
     alert('Card clicked!');
   },
@@ -62,7 +77,7 @@ export const cardBlockDummyData2: CardBlock = {
 export const cardBlockDummyData3: CardBlock = {
   title: 'Info Card Title',
   text: 'This card provides some valuable information.',
-  image: imageDummyData,
+  image: portfolioIcon,
   onClick: () => {
     alert('Card clicked!');
   },
