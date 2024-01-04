@@ -31,6 +31,7 @@ const { title, subtitle, description, button } = defineProps<TextBlock>();
 @import '../css/vars';
 @import '../css/mixins';
 .textContainer {
+  width: 100%;
   display: flex;
   flex-direction: column;
   h1 {

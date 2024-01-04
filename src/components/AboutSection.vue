@@ -17,7 +17,9 @@ const { title, subtitle, firstColumnCards, secondColumnCards } =
 <template>
   <div class="container">
     <div class="firstColumn">
-      <TextBlock :title="title" :subtitle="subtitle" />
+      <div class="textblockContainer">
+        <TextBlock :title="title" :subtitle="subtitle" />
+      </div>
       <CardBlock
         v-for="card in firstColumnCards"
         :key="card.title"
@@ -52,20 +54,25 @@ const { title, subtitle, firstColumnCards, secondColumnCards } =
   display: flex;
   justify-content: space-between;
   padding: 3em;
+  column-gap: 4rem;
   .firstColumn,
   .secondColumn {
     display: flex;
     flex-direction: column;
-    max-width: 50%;
   }
 
   .firstColumn {
     row-gap: 3em;
+    width: 60%;
+    .textblockContainer {
+      max-width: 80%;
+    }
   }
 
   .secondColumn {
+    width: 40%;
     padding: 1em 0;
-    row-gap: 1em;
+    row-gap: 3em;
   }
 }
 </style>

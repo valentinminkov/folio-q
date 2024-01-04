@@ -59,12 +59,19 @@ const computedClass = computed(() => {
 .card {
   border-radius: 0;
   border: none;
-  display: flex;
   &.stackedLayout {
+    display: flex;
     flex-direction: column;
   }
   &.adjacentLayout {
-    //todo
+    display: grid;
+    overflow: hidden;
+    grid-template-columns: 1fr 1fr;
+
+    .cardBlockTextContainer {
+    }
+    .image {
+    }
   }
   .cardBlockTextContainer {
     background-color: $grayblue;
