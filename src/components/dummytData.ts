@@ -37,7 +37,7 @@ export const infoBlockDummyData: InfoBlock = {
   secondColumnContent: {} as VNode,
 };
 
-export const cardBlockDummyData: CardBlock = {
+export const cardBlockDummyData1: CardBlock = {
   title: 'Info Card Title',
   text: 'This card provides some valuable information.',
   image: imageDummyData,
@@ -45,15 +45,38 @@ export const cardBlockDummyData: CardBlock = {
     alert('Card clicked!');
   },
   className: 'info-card-class',
-  layout: 'column',
+  layout: 'stacked',
+};
+
+export const cardBlockDummyData2: CardBlock = {
+  title: 'Info Card Title',
+  text: 'This card provides some valuable information.',
+  image: imageDummyData,
+  onClick: () => {
+    alert('Card clicked!');
+  },
+  className: 'info-card-class',
+  layout: 'adjacent',
+};
+
+export const cardBlockDummyData3: CardBlock = {
+  title: 'Info Card Title',
+  text: 'This card provides some valuable information.',
+  image: imageDummyData,
+  onClick: () => {
+    alert('Card clicked!');
+  },
+  className: 'info-card-class',
+  layout: 'adjacent',
+  seperator: false,
 };
 
 export const aboutSectionDummyData = {
   title: 'Skills & Expertise',
   subtitle:
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore',
-  firstColumnCards: [cardBlockDummyData] as CardBlock[],
-  secondColumnCards: [cardBlockDummyData, cardBlockDummyData] as CardBlock[],
+  firstColumnCards: [cardBlockDummyData2] as CardBlock[],
+  secondColumnCards: [cardBlockDummyData1, cardBlockDummyData3] as CardBlock[],
 };
 
 export const dummyProject: Project = {
