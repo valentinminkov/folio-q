@@ -34,28 +34,53 @@ const { title, subtitle, description, button } = defineProps<TextBlock>();
 <style scoped lang="scss">
 @import '../css/vars';
 @import '../css/mixins';
+
 .textContainer {
   width: 100%;
   display: flex;
   flex-direction: column;
+  align-items: start;
+  gap: 1rem;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    padding: 0;
+    margin: 0 0 0.5rem;
+    font-weight: bold;
+  }
+
   h1 {
-    padding: 0;
-    margin: 0;
+    font-weight: bolder;
+    font-size: 2rem;
   }
+
   h2 {
-    padding: 0;
-    margin: 0;
+    font-size: 1.75rem;
   }
+
   h3 {
-    padding: 0;
-    margin: 0;
+    font-size: 1.5rem;
   }
 
   h4 {
-    padding: 0;
-    margin: 0;
+    font-size: 1.25rem;
   }
+
+  h5 {
+    font-size: 1rem;
+  }
+
   p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0 0 1rem;
+  }
+
+  .button-container {
+    margin-top: 1rem;
   }
 }
 </style>
