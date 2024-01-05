@@ -38,12 +38,12 @@ const { projects, title } = defineProps<ProjectsSection>();
 @import '../css/vars';
 .projectSectionContainer {
   background-color: $thirdiary_color;
-  padding-left: 2em;
-  padding-bottom: 2em;
+  padding: 0em 2em;
+  padding-bottom: 4em;
   .projectsContainer {
     display: flex;
     flex-direction: column;
-    row-gap: 0.5em;
+    row-gap: 3em;
   }
 }
 </style>

@@ -23,19 +23,23 @@ const { title, image, onClick, description } = defineProps<Project>();
   overflow: hidden;
   align-items: center;
   background-color: $secondary_color;
-}
-
-.imageContainer {
-  padding: 0 1rem;
-  width: 50%;
-  height: 100%;
-
-  .image {
-    cursor: pointer;
-    :hover {
-      transition: 0.1s;
-      opacity: 0.9;
-      transform: scale(1.01);
+  padding: 2em;
+  cursor: pointer;
+  .imageContainer {
+    padding: 0 1rem;
+    width: 50%;
+    height: 100%;
+    .image {
+      transition: 1s;
+      transform: scale(1.3);
+    }
+  }
+  &:hover {
+    .imageContainer {
+      .image {
+        opacity: 0.9;
+        transform: scale(1.4);
+      }
     }
   }
 }

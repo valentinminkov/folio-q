@@ -28,6 +28,7 @@ const { title, subtitle, firstColumnCards, secondColumnCards } =
         :image="card.image"
         :on-click="card.onClick"
         :layout="card.layout"
+        :class="card.className"
         class-name="card-block"
       />
     </div>
@@ -40,6 +41,7 @@ const { title, subtitle, firstColumnCards, secondColumnCards } =
         :image="card.image"
         :on-click="card.onClick"
         :layout="card.layout"
+        :class="card.className"
         class-name="card-block"
       />
     </div>
@@ -63,16 +65,16 @@ const { title, subtitle, firstColumnCards, secondColumnCards } =
 
   .firstColumn {
     row-gap: 3em;
-    width: 60%;
+    width: 55%;
     .textblockContainer {
       max-width: 80%;
     }
   }
 
   .secondColumn {
-    width: 40%;
-    padding: 1em 0;
+    max-width: 450px;
     row-gap: 3em;
+    height: 100%;
   }
 }
 </style>

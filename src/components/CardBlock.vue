@@ -73,6 +73,15 @@ const computedClass = computed(() => {
     .image {
     }
   }
+
+  &.skillsCard {
+    height: 100%;
+  }
+
+  &.resumeCard {
+    align-self: flex-end;
+  }
+
   .cardBlockTextContainer {
     background-color: $grayblue;
   }

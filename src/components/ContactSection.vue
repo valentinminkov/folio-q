@@ -27,7 +27,9 @@ const message = ref('');
           v-model="email"
           label="email"
           class="input"
+          color="orange"
           label-color="white"
+          bg-color="grey"
         />
         <q-input
           filled
@@ -36,9 +38,11 @@ const message = ref('');
           class="input"
           type="textarea"
           label-color="white"
+          color="orange"
+          bg-color="grey"
         />
+        <BaseButton text="Submit" :onClick="onSubmit" />
       </div>
-      <BaseButton text="Submit" :onClick="onSubmit" />
     </div>
   </div>
 </template>
@@ -63,6 +67,7 @@ const message = ref('');
       display: flex;
       flex-direction: column;
       row-gap: 1em;
+      max-width: 500px;
       .input {
         width: 100%;
         background-color: $inputs_background_color;
