@@ -18,7 +18,14 @@ const { text, className, onClick, url } = defineProps<Button>();
 </template>
 
 <style scoped lang="scss">
+@import '../css/mixins';
+@import '../css/vars';
 .button {
   border-radius: 0;
+  transition: 0.3s;
+  &:hover {
+    color: $accent_color !important;
+    background-color: darken($accent_color, 30%) !important;
+  }
 }
 </style>
