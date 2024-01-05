@@ -65,7 +65,7 @@ const props = defineProps<TextBlock>();
   h4,
   h5 {
     padding: 0;
-    margin: 0 0 0.5rem;
+    padding: 0 0 0.5rem;
     font-weight: bold;
   }
 
@@ -93,11 +93,11 @@ const props = defineProps<TextBlock>();
   p {
     font-size: 1rem;
     line-height: 1.6;
-    margin: 0 0 1rem;
+    padding: 0 0 1rem;
   }
 
   .button-container {
-    margin-top: 1rem;
+    padding-top: 1rem;
   }
 }
 </style>
