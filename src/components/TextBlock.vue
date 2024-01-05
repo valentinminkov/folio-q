@@ -5,6 +5,9 @@ import BaseButton from 'components/BaseButton.vue';
 interface TextBlock {
   title?: string;
   subtitle?: string;
+  smallTitle?: string;
+  minorTitle?: string;
+  leastTitle?: string;
   description?: string;
   button?: Button;
 }
@@ -15,9 +18,10 @@ const { title, subtitle, description, button } = defineProps<TextBlock>();
 <template>
   <div class="textContainer" v-if="title || subtitle || description">
     <h1 v-if="title">{{ title }}</h1>
-    <h4 v-if="subtitle">
-      {{ subtitle }}
-    </h4>
+    <h2 v-if="subtitle">{{ subtitle }}</h2>
+    <h3 v-if="smallTitle">{{ smallTitle }}</h3>
+    <h4 v-if="minorTitle">{{ minorTitle }}</h4>
+    <h5 v-if="leastTitle">{{ leastTitle }}</h5>
     <p v-if="description">
       {{ description }}
     </p>
@@ -38,6 +42,15 @@ const { title, subtitle, description, button } = defineProps<TextBlock>();
     padding: 0;
     margin: 0;
   }
+  h2 {
+    padding: 0;
+    margin: 0;
+  }
+  h3 {
+    padding: 0;
+    margin: 0;
+  }
+
   h4 {
     padding: 0;
     margin: 0;

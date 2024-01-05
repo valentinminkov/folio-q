@@ -18,7 +18,7 @@ const { title, subtitle, firstColumnCards, secondColumnCards } =
   <div class="container">
     <div class="firstColumn">
       <div class="textblockContainer">
-        <TextBlock :title="title" :subtitle="subtitle" />
+        <TextBlock :title="title" :minor-title="subtitle" />
       </div>
       <CardBlock
         v-for="card in firstColumnCards"

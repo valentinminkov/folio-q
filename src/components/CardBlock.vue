@@ -40,7 +40,7 @@ const computedClass = computed(() => {
     />
 
     <q-card-section class="cardBlockTextContainer">
-      <TextBlock :title="title" :description="text" />
+      <TextBlock :least-title="title" :description="text" />
     </q-card-section>
 
     <q-img
