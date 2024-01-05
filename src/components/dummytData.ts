@@ -8,9 +8,17 @@ import type {
 } from 'components/types/components';
 import type { VNode } from 'vue';
 
+const smallerLoremiPsum = 'Lorem ipsum dolor sit amet';
+const smallLoremiPsum =
+  'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore';
+const mediumLoremIpsum =
+  'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.';
+const largeLoremIpsum = `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`;
+
 export const imageDummyData: Image = {
   src: 'https://cdn.quasar.dev/img/mountains.jpg',
-  alt: 'Some description',
+  alt: smallLoremiPsum,
   className: 'image-class',
 };
 
@@ -50,9 +58,9 @@ export const buttonDummyData: Button = {
 };
 
 export const heroBlockDummyData: HeroBlock = {
-  title: "I'm Valentin, a Web Developer. ",
+  title: smallerLoremiPsum,
   button: buttonDummyData,
-  subtitle: 'We offer services.',
+  subtitle: mediumLoremIpsum,
   className: 'hero-class',
   image: heroDummyImg,
 };
@@ -69,7 +77,7 @@ export const infoBlockDummyData: InfoBlock = {
 
 export const uiDesignCard: CardBlock = {
   title: 'UI/UX Design',
-  text: 'Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia.',
+  text: smallLoremiPsum,
   image: uiDesignImg,
   onClick: () => {
     alert('Card clicked!');
@@ -79,8 +87,8 @@ export const uiDesignCard: CardBlock = {
 };
 
 export const skillsCard: CardBlock = {
-  title: 'Full-stack Web Development',
-  text: 'Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia.',
+  title: 'Lorem ipsum dolor sit amet',
+  text: smallLoremiPsum,
   image: skillsImg,
   onClick: () => {
     alert('Card clicked!');
@@ -91,7 +99,7 @@ export const skillsCard: CardBlock = {
 
 export const resumeCard: CardBlock = {
   title: 'Download Resume',
-  text: 'Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia.',
+  text: smallLoremiPsum,
   image: portfolioIcon,
   onClick: () => {
     alert('Card clicked!');
@@ -103,15 +111,14 @@ export const resumeCard: CardBlock = {
 
 export const aboutSectionDummyData = {
   title: 'Skills & Expertise',
-  subtitle:
-    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore',
+  subtitle: smallLoremiPsum,
   firstColumnCards: [skillsCard] as CardBlock[],
   secondColumnCards: [uiDesignCard, resumeCard] as CardBlock[],
 };
 
 export const dummyProject1: Project = {
   title: 'Project Title',
-  description: 'This is a project description.',
+  description: mediumLoremIpsum,
   image: projectImgDummyData1,
   onClick: () => {
     alert('Project clicked!');
@@ -120,7 +127,7 @@ export const dummyProject1: Project = {
 
 export const dummyProject2: Project = {
   title: 'Project Title',
-  description: 'This is a project description.',
+  description: largeLoremIpsum,
   image: projectImgDummyData2,
   onClick: () => {
     alert('Project clicked!');
@@ -129,8 +136,7 @@ export const dummyProject2: Project = {
 
 export const contactSectionDummyData = {
   title: 'Contact Us',
-  description:
-    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore',
+  description: mediumLoremIpsum,
   onSubmit: () => {
     alert('Form submitted!');
   },
