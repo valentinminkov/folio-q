@@ -37,7 +37,6 @@ const { title, image, onClick, description } = defineProps<Project>();
   &:hover {
     .imageContainer {
       .image {
-        opacity: 0.9;
         transform: scale(1.4);
       }
     }

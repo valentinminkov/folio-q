@@ -63,11 +63,13 @@ const message = ref('');
     flex-direction: column;
     row-gap: 1.5em;
     width: 50%;
+    align-items: center;
     .inputsContainer {
       display: flex;
       flex-direction: column;
       row-gap: 1em;
-      max-width: 500px;
+      width: 100%;
+      max-width: 450px;
       .input {
         width: 100%;
         background-color: $inputs_background_color;
