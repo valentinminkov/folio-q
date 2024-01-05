@@ -4,29 +4,46 @@ import BaseButton from 'components/BaseButton.vue';
 
 interface TextBlock {
   title?: string;
+  titleClass?: string;
   subtitle?: string;
+  subtitleClass?: string;
   smallTitle?: string;
+  smallTitleClass?: string;
   minorTitle?: string;
+  minorTitleClass?: string;
   leastTitle?: string;
+  leastTitleClass?: string;
   description?: string;
+  descriptionClass?: string;
   button?: Button;
 }
 
-const { title, subtitle, description, button } = defineProps<TextBlock>();
+const props = defineProps<TextBlock>();
 </script>
 
 <template>
-  <div class="textContainer" v-if="title || subtitle || description">
-    <h1 v-if="title">{{ title }}</h1>
-    <h2 v-if="subtitle">{{ subtitle }}</h2>
-    <h3 v-if="smallTitle">{{ smallTitle }}</h3>
-    <h4 v-if="minorTitle">{{ minorTitle }}</h4>
-    <h5 v-if="leastTitle">{{ leastTitle }}</h5>
-    <p v-if="description">
-      {{ description }}
+  <div
+    class="textContainer"
+    v-if="props.title || props.subtitle || props.description"
+  >
+    <h1 v-if="props.title" :class="props.titleClass">{{ props.title }}</h1>
+    <h2 v-if="props.subtitle" :class="props.subtitleClass">
+      {{ props.subtitle }}
+    </h2>
+    <h3 v-if="props.smallTitle" :class="props.smallTitleClass">
+      {{ props.smallTitle }}
+    </h3>
+    <h4 v-if="props.minorTitle" :class="props.minorTitleClass">
+      {{ props.minorTitle }}
+    </h4>
+    <h5 v-if="props.leastTitle" :class="props.leastTitleClass">
+      {{ props.leastTitle }}
+    </h5>
+    <p v-if="props.description" :class="props.descriptionClass">
+      {{ props.description }}
     </p>
-    <div v-if="button && button.text && button.url">
-      <BaseButton :text="button.text" :url="button.url" />
+    <div v-if="props.button && props.button.text && props.button.url">
+      <BaseButton :text="props.button.text" :url="props.button.url" />
     </div>
   </div>
 </template>

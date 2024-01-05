@@ -6,7 +6,13 @@ const { title, image, onClick, description } = defineProps<Project>();
 
 <template>
   <div class="cardContainer" @click="onClick">
-    <TextBlock :title="title" :description="description" />
+    <div class="textContainer">
+      <TextBlock
+        :title="title"
+        :description="description"
+        titleClass="projectTitle"
+      />
+    </div>
 
     <div class="imageContainer">
       <q-img :src="image.src" :ratio="16 / 9" class="image" />
@@ -24,6 +30,9 @@ const { title, image, onClick, description } = defineProps<Project>();
   align-items: center;
   background-color: $secondary_color;
   padding: 2em;
+  .textContainer {
+    width: 50%;
+  }
   cursor: pointer;
   .imageContainer {
     padding: 0 1rem;
@@ -35,6 +44,10 @@ const { title, image, onClick, description } = defineProps<Project>();
     }
   }
   &:hover {
+    ::v-deep .projectTitle {
+      transition: color 0.3s ease;
+      color: $accent_color;
+    }
     .imageContainer {
       .image {
         transform: scale(1.4);

@@ -13,7 +13,9 @@ const { projects, title } = defineProps<ProjectsSection>();
 
 <template>
   <div class="projectSectionContainer">
-    <TextBlock :title="title" />
+    <div class="titleContainer">
+      <TextBlock :title="title" />
+    </div>
 
     <div class="projectsContainer">
       <q-intersection
@@ -37,6 +39,9 @@ const { projects, title } = defineProps<ProjectsSection>();
 @import '../css/mixins';
 @import '../css/vars';
 .projectSectionContainer {
+  .titleContainer {
+    padding: 2em 0;
+  }
   background-color: $thirdiary_color;
   padding: 0em 2em;
   padding-bottom: 4em;
