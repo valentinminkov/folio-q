@@ -42,7 +42,10 @@ const props = defineProps<TextBlock>();
     <p v-if="props.description" :class="props.descriptionClass">
       {{ props.description }}
     </p>
-    <div v-if="props.button && props.button.text && props.button.url">
+    <div
+      class="buttonContainer"
+      v-if="props.button && props.button.text && props.button.url"
+    >
       <BaseButton :text="props.button.text" :url="props.button.url" />
     </div>
   </div>
@@ -96,7 +99,7 @@ const props = defineProps<TextBlock>();
     padding: 0 0 1rem;
   }
 
-  .button-container {
+  .buttonContainer {
     padding-top: 1rem;
   }
 }
