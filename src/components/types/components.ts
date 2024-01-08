@@ -6,6 +6,8 @@ export interface Button {
   onClick?: () => void;
   className?: string;
   icon?: unknown;
+  outline?: boolean;
+  flat?: boolean;
 }
 
 export interface HeroBlock {

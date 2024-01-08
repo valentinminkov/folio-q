@@ -3,32 +3,23 @@
     <q-page-container>
       <router-view />
     </q-page-container>
-    <!-- Footer -->
-    <q-footer class="footer">
-      <q-toolbar>
-        <q-toolbar-title>
-          <q-avatar>
-            <img src="favicon.svg" />
-          </q-avatar>
-          <div>VM</div>
-        </q-toolbar-title>
-      </q-toolbar>
-    </q-footer>
+    <FooterBar />
   </q-layout>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+import FooterBar from '../components/FooterBar.vue';
 
 export default defineComponent({
   name: 'MainLayout',
+  components: {
+    FooterBar,
+  },
 });
 </script>
 
 <style scoped lang="scss">
 @import '../css/mixins';
 @import '../css/vars';
-.footer {
-  background-color: $fourth_color;
-}
 </style>
